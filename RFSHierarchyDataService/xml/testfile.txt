@@ -1,0 +1,7 @@
+--initial wsdl url from fusion service:
+http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?WSDL
+
+-- service deployed to eg
+
+-- service common lib.
+
