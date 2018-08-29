@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dfcc1c9a-43c6-467d-a671-432d77ae9a8f" activeEnvironment="Default" name="LookupFindIt" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="${projectDir}" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="fb67227f-6ace-4c04-8c6e-0df5ca18d64c" wsaVersion="NONE" name="LookupFindItBinding" type="wsdl" bindingName="{http://xmlns.saksinc.com/CommonModules/FinditSearch/LookupFindIt}LookupFindItBinding" soapVersion="1_1" anonymous="optional" definition="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?WSDL"><con:part><con:url>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="LookupFindIt" targetNamespace="http://xmlns.saksinc.com/CommonModules/FinditSearch/LookupFindIt" xmlns:ns2="http://www.xmlns.saksinc.com" xmlns:ns1="http://xmlns.saksinc.com/CommonModules/LookupFindIt" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:ns3="http://www.xmlsn.saksinc.com" xmlns:client="http://xmlns.saksinc.com/CommonModules/FinditSearch/LookupFindIt" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch!2.0/LookupFindIt.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="LookupFindIt">
+    <plnk:role name="LookupFindItProvider" portType="client:LookupFindIt"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xmlns.saksinc.com/CommonModules/LookupFindIt" schemaLocation="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/LookupFindIt.xsd"/>
+    </schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.xmlns.saksinc.com" schemaLocation="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/SQL.xsd"/>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.xmlns.saksinc.com" schemaLocation="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/WhereClause.xsd"/>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.xmlsn.saksinc.com" schemaLocation="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/DBResult.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="LookupFindItRequestMessage">
+    <wsdl:part name="payload" element="ns1:FindItRequest"/>
+  </wsdl:message>
+  <wsdl:message name="LookupFindItResponseMessage">
+    <wsdl:part name="payload" element="ns1:FindItResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="LookupFindIt">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:LookupFindItRequestMessage"/>
+      <wsdl:output message="client:LookupFindItResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LookupFindItBinding" type="client:LookupFindIt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LookupFindIt_ep">
+    <wsdl:port name="LookupFindIt_pt" binding="client:LookupFindItBinding">
+      <soap:address location="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/LookupFindIt.xsd</con:url><con:content><![CDATA[<schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.saksinc.com/CommonModules/LookupFindIt" xmlns:fid="http://xmlns.saksinc.com/CommonModules/LookupFindIt" xmlns:fidtyp="http://xmlns.saksinc.com/CommonModules/LookupFindIt/Types" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import schemaLocation="http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/LookupFindItTypes.xsd" namespace="http://xmlns.saksinc.com/CommonModules/LookupFindIt/Types"/>
+  <element name="FindItRequest" type="fidtyp:RetrieveByWildCardRequestType"/>
+  <element name="FindItResponse">
+    <complexType>
+      <sequence>
+        <element name="result" type="string" maxOccurs="unbounded"/>
+      </sequence>
+    </complexType>
+  </element>
+  <complexType name="FindItResponseCollection">
+    <sequence>
+      <element name="FindItResponseOutput" maxOccurs="unbounded" type="fidtyp:RetrieveByWildCardResponseType"/>
+      <element name="result" maxOccurs="unbounded" type="string"/>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/LookupFindItTypes.xsd</con:url><con:content><![CDATA[<schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://xmlns.saksinc.com/CommonModules/LookupFindIt/Types" xmlns:fidtyp="http://xmlns.saksinc.com/CommonModules/LookupFindIt/Types" xmlns="http://www.w3.org/2001/XMLSchema">
+  <complexType name="RetrieveByWildCardRequestType">
+    <sequence>
+      <element name="RestXML" type="string"/>
+      <element name="Chain" type="fidtyp:ChainType" minOccurs="0"/>
+      <element name="CountryCode" type="fidtyp:CountryCodeType" minOccurs="0"/>
+      <element name="DeptNo" minOccurs="0" type="fidtyp:DeptNoType"/>
+      <element name="ClassNo" minOccurs="0" type="fidtyp:ClassNoType"/>
+      <element name="SSN" type="fidtyp:SSNType" minOccurs="0"/>
+      <element name="VendorStyle" type="fidtyp:VendorStyleType" minOccurs="0"/>
+      <element name="MFGName" type="fidtyp:MfgNameType" minOccurs="0"/>
+      <element name="MFGNo" type="fidtyp:MfgNoType" minOccurs="0"/>
+      <element name="UdaID" type="fidtyp:UdaIDType" minOccurs="0"/>
+      <element name="UdaValue" type="fidtyp:UdaValueType" minOccurs="0"/>
+      <element name="GMM" type="fidtyp:GMMType" minOccurs="0"/>
+      <element name="DMM" type="fidtyp:DMMType" minOccurs="0"/>
+      <element name="RowStart" type="integer"/>
+      <element name="RowEnd" type="integer"/>
+    </sequence>
+  </complexType>
+  <complexType name="RetrieveByWildCardResponseType">
+    <sequence>
+      <element name="SSN" type="fidtyp:SSNType"/>
+      <element name="SKN" type="fidtyp:SKNType"/>
+      <element name="UPC" type="fidtyp:UPCType"/>
+      <element name="SVS" type="fidtyp:SVSType"/>
+      <element name="FashionStyleNo" type="fidtyp:FashionStyleNoType"/>
+      <element name="VendorStyle" type="fidtyp:VendorStyleType"/>
+      <element name="DeptNo" type="fidtyp:DeptNoType"/>
+      <element name="ClassNo" type="fidtyp:ClassNoType"/>
+      <element name="MfgNo" type="fidtyp:MfgNoType"/>
+      <element name="MfgName" type="fidtyp:MfgNameType"/>
+      <element name="ItemDescShort" type="fidtyp:ItemDescShortType"/>
+      <element name="ItemDescLong" type="fidtyp:ItemDescLongType"/>
+      <element name="SizeCode" type="fidtyp:SizeCodeType"/>
+      <element name="SizeDesc" type="fidtyp:SizeDescType"/>
+      <element name="ColorCode" type="fidtyp:ColorCodeType"/>
+      <element name="ColorDesc" type="fidtyp:ColorDescType"/>
+      <element name="ConsignmentCode" type="fidtyp:ConsignmentCodeType"/>
+      <element name="CurTicketPriceDollars" type="fidtyp:CurTicketPriceDollarsType"/>
+      <element name="CurOwnedRetailDollars" type="fidtyp:CurOwnedRetailDollarsType"/>
+      <element name="CostAmountDollars" type="fidtyp:CurOwnedPriceType"/>
+      <element name="UdaID" type="fidtyp:UdaIDType"/>
+      <element name="UdaIDDesc" type="fidtyp:UdaIDDescType"/>
+      <element name="UdaValue" type="fidtyp:UdaValueType"/>
+      <element name="UdaValueDesc" type="fidtyp:UdaValueDescType"/>
+    </sequence>
+  </complexType>
+  <simpleType name="ChainType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="ClassNoType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="ColorCodeType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="ColorDescType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="codeType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="CountryCodeType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="ConsignmentCodeType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="CurOwnedRetailDollarsType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="CurOwnedPriceType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="CurTicketPriceDollarsType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="DeptNoType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="DMMType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="FashionStyleNoType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="ItemIDType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="GMMType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="ItemDescShortType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="ItemDescLongType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="messageType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="MfgNameType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="MfgNoType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="SeasonType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="severityType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="SizeCodeType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="SizeDescType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="SKNType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="SpecInstTxtType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="SSNType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="StyleNoType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="SVSType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="UdaIDType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="UdaIDDescType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="UdaValueType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="UdaValueDescType">
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="UPCType">
+    <restriction base="integer"/>
+  </simpleType>
+  <simpleType name="VendorStyleType">
+    <restriction base="string"/>
+  </simpleType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/SQL.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.xmlns.saksinc.com" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.xmlns.saksinc.com">
+  <xsd:element name="SQLCollection">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="SQL" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/WhereClause.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.xmlns.saksinc.com" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.xmlns.saksinc.com">
+  <xsd:element name="WhereClause">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Chain" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="CountryCode" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="DeptNo" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="ClassNo" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="SSN" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="VendorStyle" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="MfgName" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="MfgNo" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="GMMNo" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="DMMNo" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="UdaID" minOccurs="0" type="xsd:string"/>
+        <xsd:element name="UdaValue" minOccurs="0" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="WhereClauseString">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="WhereClause" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep?XSD=xsd/DBResult.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="http://www.xmlsn.saksinc.com" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.xmlsn.saksinc.com">
+  <xsd:element name="ROWSET">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="ROWS" type="xsd:string" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://jxn-ux-fusion11q.saksinc.com:8001/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep</con:endpoint><con:endpoint>http://localhost:7800/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep</con:endpoint></con:endpoints><con:operation id="781fb2a5-9c3e-48b0-8928-2018b95404dc" isOneWay="false" action="process" name="process" bindingOperationName="process" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5f09951c-93a4-4479-87df-4d271bc95ad2" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:look="http://xmlns.saksinc.com/CommonModules/LookupFindIt" xmlns:typ="http://xmlns.saksinc.com/CommonModules/LookupFindIt/Types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <look:FindItRequest>\r
+         <typ:RestXML>Chain=8&amp;amp;CountryCode=US&amp;amp;VendorStyle=7771651AXBAX&amp;amp;RowStart=1&amp;amp;RowEnd=51&amp;amp;CallBack=jQuery211005859496157583055_1535464226060</typ:RestXML>\r
+         <!--Optional:-->\r
+         <typ:Chain>8</typ:Chain>\r
+         <!--Optional:-->\r
+         <typ:CountryCode>ys</typ:CountryCode>\r
+         <!--Optional:-->\r
+         <typ:DeptNo>6</typ:DeptNo>\r
+         <!--Optional:-->\r
+         <typ:ClassNo>6</typ:ClassNo>\r
+         <!--Optional:-->\r
+         <typ:SSN>6</typ:SSN>\r
+         <!--Optional:-->\r
+         <typ:VendorStyle>6</typ:VendorStyle>\r
+         <!--Optional:-->\r
+         <typ:MFGName>6</typ:MFGName>\r
+         <!--Optional:-->\r
+         <typ:MFGNo>6</typ:MFGNo>\r
+         <!--Optional:-->\r
+         <typ:UdaID>6</typ:UdaID>\r
+         <!--Optional:-->\r
+         <typ:UdaValue>6</typ:UdaValue>\r
+         <!--Optional:-->\r
+         <typ:GMM>6</typ:GMM>\r
+         <!--Optional:-->\r
+         <typ:DMM>6</typ:DMM>\r
+         <typ:RowStart>6</typ:RowStart>\r
+         <typ:RowEnd>6</typ:RowEnd>\r
+      </look:FindItRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="process"/><con:wsrmConfig version="1.2"/></con:call><con:call id="c98f1cf8-25e7-4b72-9842-6afd84be3105" name="Request IIBRest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7800/soa-infra/services/CommonModules/FinditSearch/LookupFindIt_ep</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:look="http://xmlns.saksinc.com/CommonModules/LookupFindIt" xmlns:typ="http://xmlns.saksinc.com/CommonModules/LookupFindIt/Types">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <look:FindItRequest>\r
+         <typ:RestXML xmlns:typ="http://xmlns.saksinc.com/CommonModules/LookupFindIt/Types">
+Chain=8&amp;CountryCode=US&amp;VendorStyle=7771651AXBAX&amp;RowStart=1&RowEnd=51&amp;CallBack=jQuery211005859496157583055_1535464226060
+</typ:RestXML>
+</look:FindItRequest>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="process"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
