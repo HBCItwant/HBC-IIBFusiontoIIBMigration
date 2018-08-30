@@ -139,7 +139,7 @@ CREATE COMPUTE MODULE validate_udaId_UdaVal_process_Request_Response_Compute
 		
 	END IF;
 		-- looping through the number of retruned results
-		IF CARDINALITY(OutputRoot.XML.Query.Result[] > 0) THEN
+		IF CARDINALITY(OutputRoot.XML.Query.Result[] ) > 0 THEN
 			DECLARE j INTEGER 1; 
 			DECLARE countmsg INTEGER CARDINALITY(OutputRoot.XML.Query.Result[]); 
 			WHILE (j <= countmsg) do 
@@ -149,7 +149,7 @@ CREATE COMPUTE MODULE validate_udaId_UdaVal_process_Request_Response_Compute
 				SET j = j + 1;
 			END WHILE;
 		ELSE
-		 
+		   SET OutputRoot.XMLNS.ns:FindItResponse.ns:result = '';
 		END IF;
 	END;
 END MODULE;
