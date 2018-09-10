@@ -1,0 +1,29 @@
+
+
+Importing file: \soa-infra\services\CommonModules\PrinterLookupService\retrievePrinterInfoREST.wsdl
+
+Copying source WSDL retrievePrinterInfoREST?WSDL to retrievePrinterInfoREST.wsdl.
+
+The following is a list of WS-I warning messages found when importing:
+WSDL: The location URI is invalid for the HTTP operation. You must specify a valid location URI for every HTTP Operation., Line: 1, Column: 1
+
+
+The WSDL import will proceed with bindings retrievePrinterInfoByStore_pttBinding.
+Creating wsdl schema document for RemoteFiles/retrievePrinterInfoREST.xsd.
+Parsing wsdl binding {http://xmlns.oracle.com/pcbpel/adapter/http/Printer/PrinterLookupService/retrievePrinterInfoREST}retrievePrinterInfoByStore_pttBinding.
+Parsing wsdl binding input retrievePrinterInfoByStore.
+Parsing wsdl binding output retrievePrinterInfoByStore.
+Parsing wsdl binding fault fault.
+Processing doc style for operation retrievePrinterInfoByStore.
+Populating WSDL schema RemoteFiles/retrievePrinterInfoREST.xsd.
+Creating file RemoteFiles/retrievePrinterInfoREST.xsd in the workspace.
+Creating file /retrievePrinterInfoByStore/PrinterLookup.xsd in the workspace.
+Creating file /retrievePrinterInfoByStore/PrinterType.xsd in the workspace.
+
+Elapsed time processing this message definition file: 0.346 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
