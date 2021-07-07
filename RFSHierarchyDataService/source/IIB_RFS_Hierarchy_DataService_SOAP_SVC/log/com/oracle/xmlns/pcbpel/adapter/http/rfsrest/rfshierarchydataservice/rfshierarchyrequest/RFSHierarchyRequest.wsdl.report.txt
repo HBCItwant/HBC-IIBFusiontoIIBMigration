@@ -1,0 +1,45 @@
+
+
+Importing file: C:\Vijay\Development\workspace\POC\RFSTestwsdl\RemoteFiles\RFSHierarchyRequest.wsdl
+
+Copying source WSDL RFSHierarchyRequest.wsdl to RFSHierarchyRequest.wsdl.
+The WSDL import will proceed with bindings retrieveRFSHierarchyData_pttBinding.
+Creating wsdl schema document for file:///C:/Vijay/Development/workspace/POC/RFSTestwsdl/RemoteFiles/RFSHierarchyRequest.wsdl.
+Parsing wsdl binding {http://xmlns.oracle.com/pcbpel/adapter/http/RFSREST/RFSHierarchyDataService/RFSHierarchyRequest}retrieveRFSHierarchyData_pttBinding.
+Parsing wsdl binding input retrieveMerchOrgInfo.
+Parsing wsdl binding output retrieveMerchOrgInfo.
+Parsing wsdl binding fault FaultByDMM.
+Parsing wsdl binding input retrieveDeptInfo.
+Parsing wsdl binding output retrieveDeptInfo.
+Parsing wsdl binding fault FaultByDept.
+Parsing wsdl binding input retrieveVendStyleInfo.
+Parsing wsdl binding output retrieveVendStyleInfo.
+Parsing wsdl binding fault FaultByVendStyle.
+Parsing wsdl binding input retrieveClassInfo.
+Parsing wsdl binding output retrieveClassInfo.
+Parsing wsdl binding fault FaultByClass.
+Parsing wsdl binding input retrieveMfgInfo.
+Parsing wsdl binding output retrieveMfgInfo.
+Parsing wsdl binding fault MfgInfoFault.
+Parsing wsdl binding input retrieveUDAInfo.
+Parsing wsdl binding output retrieveUDAInfo.
+Parsing wsdl binding fault Fault.
+Processing doc style for operation retrieveMerchOrgInfo.
+Processing doc style for operation retrieveDeptInfo.
+Processing doc style for operation retrieveVendStyleInfo.
+Processing doc style for operation retrieveClassInfo.
+Processing doc style for operation retrieveMfgInfo.
+Processing doc style for operation retrieveUDAInfo.
+Populating WSDL schema RFSHierarchyRequest.xsd.
+Creating file RFSHierarchyRequest.xsd in the workspace.
+Creating file /IIB_RFS_Hierarchy_DataService_SOAP_SVC/RFSHierarchyDataService.xsd in the workspace.
+Creating file /IIB_RFS_Hierarchy_DataService_SOAP_SVC/RFSHierarchyDataServiceTypes.xsd in the workspace.
+Creating file /IIB_RFS_Hierarchy_DataService_SOAP_SVC/RFSDataTypes.xsd in the workspace.
+
+Elapsed time processing this message definition file: 0.514 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

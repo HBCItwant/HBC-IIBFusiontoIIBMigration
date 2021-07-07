@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmXslMqsi.msgnode="ComIbmXslMqsi.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="gen/retrievePrinterInfoByStore_Request_Response.subflow" nsPrefix="gen_retrievePrinterInfoByStore_Request_Response.subflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" useDefaults="true" udpSupport="true">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.JDBC_CS_NAME" name="JDBC_CS_NAME" defaultValueLiteral="DBT1TEST">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.SCHEMA_NAME" name="SCHEMA_NAME" defaultValueLiteral="MRSS">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <translation xmi:type="utility:TranslatableString" key="retrievePrinterInfoByStore_Request_Response" bundleName="gen/retrievePrinterInfoByStore_Request_Response" pluginId="retrievePrinterInfoByStore"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/retrievePrinterInfoByStore/icons/full/obj16/retrievePrinterInfoByStore_Request_Response.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/retrievePrinterInfoByStore/icons/full/obj30/retrievePrinterInfoByStore_Request_Response.gif"/>
+    <composition>
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="20,20">
+        <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="gen/retrievePrinterInfoByStore_Request_Response" pluginId="retrievePrinterInfoByStore"/>
+      </nodes>
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.Output" location="581,34">
+        <translation xmi:type="utility:TranslatableString" key="OutTerminal.Output" bundleName="gen/retrievePrinterInfoByStore_Request_Response" pluginId="retrievePrinterInfoByStore"/>
+      </nodes>
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.fault" location="512,192">
+        <translation xmi:type="utility:TranslatableString" key="OutTerminal.fault" bundleName="gen/retrievePrinterInfoByStore_Request_Response" pluginId="retrievePrinterInfoByStore"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="171,192" dataSource="DBT1TEST" connectDatasourceBeforeFlowStarts="true" computeExpression="esql://routine/gen#retrievePrinterInfoByStore_Request_Response_Compute.Main" computeMode="exceptionAndMessage">
+        <translation xmi:type="utility:ConstantString" string="retrievePrinterInfoByStore_Compute"/>
+      </nodes>
+      <nodes xmi:type="ComIbmXslMqsi.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="93,125" stylesheetName="Transf_GetPrinterInfoInput.xsl" messageDomainProperty="XMLNSC">
+        <translation xmi:type="utility:ConstantString" string="XSL_GetPrinterInfoInput"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="OutTerminal.fault" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="OutTerminal.fault" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_3" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="OutTerminal.Output" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer>
+      <propertyDescriptor groupName="Group.Basic" configurable="true" userDefined="true" describedAttribute="Property.JDBC_CS_NAME">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.JDBC_CS_NAME" bundleName="gen/retrievePrinterInfoByStore_Request_Response" pluginId="retrievePrinterInfoByStore"/>
+        <propertyDescriptor groupName="Group.Basic" configurable="true" userDefined="true" describedAttribute="Property.SCHEMA_NAME">
+          <propertyName xmi:type="utility:TranslatableString" key="Property.SCHEMA_NAME" bundleName="gen/retrievePrinterInfoByStore_Request_Response" pluginId="retrievePrinterInfoByStore"/>
+        </propertyDescriptor>
+      </propertyDescriptor>
+    </propertyOrganizer>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>
